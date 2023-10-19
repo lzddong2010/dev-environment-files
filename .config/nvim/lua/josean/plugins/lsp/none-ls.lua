@@ -18,6 +18,8 @@ return {
         "stylua", -- lua formatter
         "black", -- python formatter
         "pylint", -- python linter
+        "mypy",
+        "ruff",
         "eslint_d", -- js linter
         "clang_format",
       },
@@ -46,6 +48,8 @@ return {
         formatting.black,
         formatting.clang_format,
         diagnostics.pylint,
+        diagnostics.mypy,
+        diagnostics.ruff,
         diagnostics.eslint_d.with({ -- js/ts linter
           condition = function(utils)
             return utils.root_has_file({ ".eslintrc.js", ".eslintrc.cjs" }) -- only enable if root has .eslintrc.js or .eslintrc.cjs
