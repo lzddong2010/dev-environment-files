@@ -42,6 +42,7 @@ return {
           "query",
           "c",
           "cpp",
+          "python",
         },
         incremental_selection = {
           enable = true,
