@@ -17,7 +17,7 @@ return {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
         "black", -- python formatter
-        "pylint", -- python linter
+        -- "pylint", -- python linter
         "mypy",
         "ruff",
         "eslint_d", -- js linter
@@ -44,10 +44,15 @@ return {
           extra_filetypes = { "svelte" },
         }), -- js/ts formatter
         formatting.stylua, -- lua formatter
-        formatting.isort,
+        -- formatting.isort,
         formatting.black,
         formatting.clang_format,
-        diagnostics.pylint,
+        -- diagnostics.pylint,
+        -- diagnostics.pylint.with({
+        --   diagnostics_postprocess = function(diagnostic)
+        --     diagnostic.code = diagnostic.message_id
+        --   end,
+        -- }),
         diagnostics.mypy,
         diagnostics.ruff,
         diagnostics.eslint_d.with({ -- js/ts linter

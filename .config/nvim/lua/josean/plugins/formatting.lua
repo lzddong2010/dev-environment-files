@@ -17,7 +17,15 @@ return {
         yaml = { "prettier" },
         markdown = { "prettier" },
         lua = { "stylua" },
-        python = { "isort", "black", "mypy", "ruff" },
+        -- -- You can use a function here to determine the formatters dynamically
+        -- python = function(bufnr)
+        --   if require("conform").get_formatter_info("ruff_format", bufnr).available then
+        --     return { "ruff_format" }
+        --   else
+        --     return { "isort", "black" }
+        --   end
+        -- end,
+        python = { "black" },
         c = { "clang_format" },
         cpp = { "clang_format" },
       },
