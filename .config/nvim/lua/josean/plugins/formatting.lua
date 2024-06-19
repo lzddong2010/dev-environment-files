@@ -26,7 +26,7 @@ return {
         --     return { "isort", "black" }
         --   end
         -- end,
-        python = { "black" },
+        python = { "isort", "black" },
         c = { "clang_format" },
         cpp = { "clang_format" },
       },
