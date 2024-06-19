@@ -1,7 +1,6 @@
 return {
   "stevearc/conform.nvim",
-  lazy = true,
-  event = { "BufReadPre", "BufNewFile" }, -- to disable, comment this out
+  event = { "BufReadPre", "BufNewFile" },
   config = function()
     local conform = require("conform")
 
@@ -16,6 +15,8 @@ return {
         json = { "prettier" },
         yaml = { "prettier" },
         markdown = { "prettier" },
+        graphql = { "prettier" },
+        liquid = { "prettier" },
         lua = { "stylua" },
         -- -- You can use a function here to determine the formatters dynamically
         -- python = function(bufnr)
